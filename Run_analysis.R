@@ -1,5 +1,6 @@
 library(dplyr)
 library(tidyr)
+library(data.table)
 #Download file
 url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(url,"data.zip")
@@ -49,4 +50,4 @@ tidy_data <- data_final_rename %>% group_by(Subject, Activity_label) %>% summari
 #Order tidy_data by subject & activity_numeric
 tidy_data<-arrange(tidy_data,Subject,Activity_numeric)
 #Write tidy data to file.
-write.table(tidy_data,"tidy_data.txt")
+write.table(tidy_data,file="tidy_data.txt",row.name=FALSE)
