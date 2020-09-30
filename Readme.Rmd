@@ -1,0 +1,17 @@
+---
+title: "Readme"
+output: html_document
+---
+
+Getting and Cleaning Data - Course Project
+
+This is the course project for the Getting and Cleaning Data Coursera course.
+The included R script, run_analysis.R, performs the following steps:
+
+1. Download & extract the raw data.
+2. Load the relevant datafiles into R (as per the project instructions).
+3. Merge the training and test data, add the subject, activity and feature information.
+4. Add a column that contains the activity name labels.
+5. Select only those data columns/features refering to mean or standard deviation measurements.
+5. Rename the columns to me more readable.
+6. Create a new tidy dataset (output as a txt file) that contains average values by subject and activity.
